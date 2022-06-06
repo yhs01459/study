@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.tymeleaf.org">
+<body>
+
+<div class = "containor">
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>이름</th>
+        </tr>
+      </thead>
+      <tbody>
+      <tr th:each="members : ${members}"> //모델안에 있는 멤버스를 꺼내와 멤버스에 저장 후 반복
+        <td th:text="${memrbers.id}"></td>
+        <td th:text="${members.name}"></td>
+
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+</body>
+</html>
